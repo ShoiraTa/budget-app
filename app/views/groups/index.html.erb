@@ -1,12 +1,14 @@
 
-<div class="nav-header d-flex justify-content-center ">
+<div class="nav-header ">
+<div> </div>
   <h4 class="text-gray-4 ">CATTEGORIES</h4>
-  <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:  'nav-link' %>
+  <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:  'nav-link text-gray-4' %>
 </div>
+
 <div class="height-80 ">
   <% if @groups %>
     <% @groups.each do |group| %>
-    <a href = "/users/<%= group.user_id %>/groups/<%= group.id %>" >
+    <a href = "/users/<%= group.user_id %>/groups/<%= group.id %>/expenditures" >
     <div class= 'category-container'>
       <div> <%= image_tag "#{group.icon}.png", style: 'height:40px; width:auto;' %>  <%=  %>
        </div>

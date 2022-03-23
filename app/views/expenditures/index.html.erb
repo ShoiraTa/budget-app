@@ -1,14 +1,23 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Expenditures</h1>
+<div class="nav-header ">
+ <div>
+      <%= link_to  :back do %>
+        <%= image_tag "back.svg", style: 'height:10px; width:auto;' %>
+      <% end  %>
+    </div>
+  <h4 class="text-gray-4 ">Expenditures</h4> 
+  <div> </div>
+</div>
 
 <div id="expenditures">
   <% @expenditures.each do |expenditure| %>
     <%= render expenditure %>
     <p>
-      <%= link_to "Show this expenditure", expenditure %>
+     
     </p>
   <% end %>
 </div>
 
-<%= link_to "New expenditure", new_expenditure_path %>
+<%= link_to "Add a new expenditure", new_user_group_expenditure_path(user_id: current_user.id, group_id: @group_id), class: 'add-ne-category-btn text-gray-4' %>
+
+
+

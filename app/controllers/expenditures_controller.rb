@@ -1,8 +1,10 @@
 class ExpendituresController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_expenditure, only: %i[ show edit update destroy ]
 
   # GET /expenditures or /expenditures.json
   def index
+    @group_id = Group.find(params[:group_id])
     @expenditures = Expenditure.all
   end
 
@@ -12,6 +14,7 @@ class ExpendituresController < ApplicationController
 
   # GET /expenditures/new
   def new
+    @group_id = Group.find(params[:group_id]).id
     @expenditure = Expenditure.new
   end
 
@@ -22,15 +25,14 @@ class ExpendituresController < ApplicationController
   # POST /expenditures or /expenditures.json
   def create
     @expenditure = Expenditure.new(expenditure_params)
+    @expenditure.user_id = current_user.id
+    @group = Group.find(params[:group_id])
+    @expenditure.group_id = @group.id
 
-    respond_to do |format|
       if @expenditure.save
-        format.html { redirect_to expenditure_url(@expenditure), notice: "Expenditure was successfully created." }
-        format.json { render :show, status: :created, location: @expenditure }
+         redirect_to user_group_expenditures_url(user_id: current_user.id, group_id: @group.id)
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @expenditure.errors, status: :unprocessable_entity }
-      end
+         render :new
     end
   end
 
@@ -65,6 +67,6 @@ class ExpendituresController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def expenditure_params
-      params.require(:expenditure).permit(:name, :amount, :user_id, :group_id)
+      params.require(:expenditure).permit(:name, :amount)
     end
 end

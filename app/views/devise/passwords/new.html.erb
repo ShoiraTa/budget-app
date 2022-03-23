@@ -1,7 +1,7 @@
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= bootstrap_devise_error_messages! %>
 
-  <div class="nav-header">
+  <div class="nav-header mb-2">
     <div>
       <%= link_to  :root do %>
         <%= image_tag "back.svg", style: 'height:10px; width:auto;' %>

@@ -6,7 +6,7 @@
         <%= image_tag "back.svg", style: 'height:10px; width:auto;' %>
       <% end  %>
     </div>
-    <h4 class="text-gray-4">ADD A NEW CATTEGORY</h4>
+    <h4 class="text-gray-4"> NEW CATTEGORY</h4>
     <div class="actions">
       <%=  f.submit ('NEXT'), class:" bg-light nav-right-action text-gray-4" %>
     </div>
@@ -18,7 +18,7 @@
 
     <div class= "form-group-custom" >
       <%= f.label :icon, "Select label for an icon:", class: "label text-gray-2" %>
-      <%= f.select  :icon, ["Education", "Entertainment", "Healthcasre", "Shopping", "Utilities", "Other" ], class:"form-control-custom" %>
+      <%= f.select  :icon, ["Education", "Entertainment", "Healthcare", "Shopping", "Utilities", "Other" ], class:"form-control-custom" %>
     </div>
     
     <div class= "form-group d-flex" >
