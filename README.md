@@ -58,6 +58,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse
+- [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance the author of the original design,
 
 ## 📝 License
 
