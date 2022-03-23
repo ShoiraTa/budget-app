@@ -33,8 +33,13 @@
       <%= form.number_field :amount,   class:"form-control-custom", placeholder: "Enter expenditure amount", autofocus: true %>
   </div>
 
-    <div class= "form-group d-flex" >
-      <%=  form.submit ('SUBMIT'), class:" add-ne-category-btn text-gray-4" %>
+  <div class= "form-group d-flex" >
+  
+  <div class='add-ne-category-btn-container-main'>
+    <div class= 'add-ne-category-btn-container'>
+        <%=  form.submit ('SUBMIT'), class:" add-ne-category-btn text-gray-4" %>
+      </div> 
     </div> 
+  </div> 
 <% end %>
 

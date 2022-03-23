@@ -21,8 +21,11 @@
       <%= f.select  :icon, ["Education", "Entertainment", "Healthcare", "Shopping", "Utilities", "Other" ], class:"form-control-custom" %>
     </div>
     
-    <div class= "form-group d-flex" >
-      <%=  f.submit ('SUBMIT'), class:" add-ne-category-btn text-gray-4" %>
+  <div class='add-ne-category-btn-container-main'>
+    <div class= 'add-ne-category-btn-container'>
+        <%=  f.submit ('SUBMIT'), class:" add-ne-category-btn text-gray-4" %>
+      </div> 
     </div> 
+  </div> 
   
   <% end %>
