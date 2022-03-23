@@ -6,8 +6,14 @@
 <div class="height-80 ">
   <% if @groups %>
     <% @groups.each do |group| %>
-    <div> <%= group.name%></div>
-
+    <a href = "/users/<%= group.user_id %>/groups/<%= group.id %>" >
+    <div class= 'category-container'>
+      <div> <%= image_tag "#{group.icon}.png", style: 'height:40px; width:auto;' %>  <%=  %>
+       </div>
+        <div><%= group.user_name(group.user_id) %> </div>
+      <div>Total: $100</div>
+    </div>
+    </a>
     <% end %>
   <% end %>
 </div>

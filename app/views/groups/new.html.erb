@@ -1,23 +1,28 @@
-<h1 class='text-center mb-3'>New Category</h1>
-
-<div class='mb-5'>
   <%= form_with(model: @group, url: user_groups_path) do |f| %>
 
-      <div class="row form ml-4">
-    <div class= "form-group d-flex mb-4" >
-      <%= f.label :name, class: "col-sm-2 col-form-label text-end mx-4" %> 
-      <div class = "col-sm-7" >
-      <%= f.text_field :name,   class:"form-control", placeholder: "Enter group name", autofocus: true %>
-      </div>
+  <div class="nav-header">
+    <div>
+      <%= link_to  :back do %>
+        <%= image_tag "back.svg", style: 'height:10px; width:auto;' %>
+      <% end  %>
+    </div>
+    <h4 class="text-gray-4">ADD A NEW CATTEGORY</h4>
+    <div class="actions">
+      <%=  f.submit ('NEXT'), class:" bg-light nav-right-action text-gray-4" %>
+    </div>
+  </div>
+
+    <div class= "form-group-custom" >
+      <%= f.text_field :name,   class:"form-control-custom", placeholder: "Enter category name", autofocus: true %>
+    </div>
+
+    <div class= "form-group-custom" >
+      <%= f.label :icon, "Select label for an icon:", class: "label text-gray-2" %>
+      <%= f.select  :icon, ["Education", "Entertainment", "Healthcasre", "Shopping", "Utilities", "Other" ], class:"form-control-custom" %>
     </div>
     
     <div class= "form-group d-flex" >
-      <div class= "col-sm-2  mx-4"></div>
-      <%= f.submit class: "btn btn-lg btn-warning submit-btn mt-4" %>
-    </div>
-  </div>
-  
-  
+      <%=  f.submit ('SUBMIT'), class:" add-ne-category-btn text-gray-4" %>
+    </div> 
   
   <% end %>
-</div>
