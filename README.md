@@ -4,8 +4,6 @@
 
 > A mobile web application where users can manage their budget: they have a list of transactions associated with a category, so that they can see how much money they spent and on what.
 
-
-
 ## Built With
 
 - HTML & CSS
