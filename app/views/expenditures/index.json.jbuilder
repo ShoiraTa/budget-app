@@ -1,1 +1,1 @@
-json.array! @expenditures, partial: "expenditures/expenditure", as: :expenditure
+json.array! @expenditures, partial: 'expenditures/expenditure', as: :expenditure

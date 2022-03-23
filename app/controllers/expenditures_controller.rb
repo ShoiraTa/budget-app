@@ -1,6 +1,6 @@
 class ExpendituresController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_expenditure, only: %i[ show edit update destroy ]
+  before_action :set_expenditure, only: %i[show edit update destroy]
 
   # GET /expenditures or /expenditures.json
   def index
@@ -9,8 +9,7 @@ class ExpendituresController < ApplicationController
   end
 
   # GET /expenditures/1 or /expenditures/1.json
-  def show
-  end
+  def show; end
 
   # GET /expenditures/new
   def new
@@ -19,8 +18,7 @@ class ExpendituresController < ApplicationController
   end
 
   # GET /expenditures/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /expenditures or /expenditures.json
   def create
@@ -30,10 +28,10 @@ class ExpendituresController < ApplicationController
 
     @expenditure.group_id = @group.id
 
-      if @expenditure.save
-         redirect_to user_group_expenditures_url(user_id: current_user.id, group_id: @group.id)
-      else
-         render :new
+    if @expenditure.save
+      redirect_to user_group_expenditures_url(user_id: current_user.id, group_id: @group.id)
+    else
+      render :new
     end
   end
 
@@ -41,7 +39,7 @@ class ExpendituresController < ApplicationController
   def update
     respond_to do |format|
       if @expenditure.update(expenditure_params)
-        format.html { redirect_to expenditure_url(@expenditure), notice: "Expenditure was successfully updated." }
+        format.html { redirect_to expenditure_url(@expenditure), notice: 'Expenditure was successfully updated.' }
         format.json { render :show, status: :ok, location: @expenditure }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -55,19 +53,20 @@ class ExpendituresController < ApplicationController
     @expenditure.destroy
 
     respond_to do |format|
-      format.html { redirect_to expenditures_url, notice: "Expenditure was successfully destroyed." }
+      format.html { redirect_to expenditures_url, notice: 'Expenditure was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_expenditure
-      @expenditure = Expenditure.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def expenditure_params
-      params.require(:expenditure).permit(:name, :amount)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_expenditure
+    @expenditure = Expenditure.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def expenditure_params
+    params.require(:expenditure).permit(:name, :amount)
+  end
 end

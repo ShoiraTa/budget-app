@@ -5,7 +5,6 @@ RSpec.describe Group, type: :model do
   let(:group) { Group.create(id: 2, name: 'Shopping', icon: 'Shopping', user_id: user.id) }
   let(:expenditure) { Expenditure.create(id: 1, name: 'Dress', amount: 12, user_id: user.id, group_id: group.id) }
 
-
   describe 'Expenditure validations' do
     context 'when valid' do
       it { expect(expenditure).to be_valid }
@@ -15,6 +14,5 @@ RSpec.describe Group, type: :model do
       expenditure.name = nil
       expect(expenditure).to_not be_valid
     end
-
   end
 end

@@ -31,6 +31,5 @@ RSpec.describe 'Expenditure', type: :feature do
       click_link 'Add a new expenditure'
       expect(page).to have_content('NEW EXPENDITURE')
     end
-
   end
 end

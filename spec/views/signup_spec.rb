@@ -23,6 +23,5 @@ RSpec.describe 'User index page', type: :feature do
 
       expect(page).to have_content("Full name can't be blank")
     end
-
   end
 end

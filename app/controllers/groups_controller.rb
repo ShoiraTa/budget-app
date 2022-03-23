@@ -1,10 +1,10 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!
-  def index 
+  def index
     @groups = Group.where(user_id: current_user.id)
   end
 
-  def new 
+  def new
     @group = Group.new
   end
 
@@ -19,13 +19,9 @@ class GroupsController < ApplicationController
     end
   end
 
-
-  def show
-
-  end
+  def show; end
 
   def group_params
     params.require(:group).permit(:name, :icon)
   end
-
 end

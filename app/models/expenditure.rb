@@ -7,8 +7,8 @@ class Expenditure < ApplicationRecord
 
   def total_expenditures(group_id)
     total = 0
-    Expenditure.where(group_id: group_id).each do |expenditure|
-     total += expenditure.amount
+    Expenditure.where(group_id:).each do |expenditure|
+      total += expenditure.amount
     end
     total
   end

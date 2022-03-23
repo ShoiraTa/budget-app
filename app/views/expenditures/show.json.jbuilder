@@ -1,1 +1,1 @@
-json.partial! "expenditures/expenditure", expenditure: @expenditure
+json.partial! 'expenditures/expenditure', expenditure: @expenditure

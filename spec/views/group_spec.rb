@@ -15,7 +15,7 @@ RSpec.describe 'Categories', type: :feature do
     scenario 'I see add a category button' do
       expect(page).to have_content('ADD A NEW CATEGORY')
     end
-    
+
     scenario 'I can see a category I added' do
       expect(page).to have_content('group')
     end
