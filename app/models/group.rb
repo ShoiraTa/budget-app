@@ -8,8 +8,8 @@ class Group < ActiveRecord::Base
     User.find(user_id).full_name
   end
 
-  def total_spent(group_id)
-    expenditures = Expenditure.where(group_id:)
+  def total_spent(id)
+    expenditures = Expenditure.where(group_id: id)
     total = 0
     expenditures.each do |expenditure|
       total += expenditure.amount
