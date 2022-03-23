@@ -1,3 +1,5 @@
+     <%
+=begin%>
     <% if current_user %>
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -18,8 +20,7 @@
     </div>
     <% else %>
 
-    <%
-=begin%>
+
  <% if current_page?(new_user_session_path) %>
       <div class="navbar navbar-default navbar-static-top">
       <div class="container bg-blue ">
@@ -31,4 +32,3 @@
     <% end %> 
 <%
 =end%>
-  <% end %>

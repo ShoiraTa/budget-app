@@ -1,0 +1,14 @@
+
+<div class="nav-header d-flex justify-content-center ">
+  <h4 class="text-gray-4 ">CATTEGORIES</h4>
+  <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:  'nav-link' %>
+</div>
+<div class="height-80 ">
+  <% if @groups %>
+    <% @groups.each do |group| %>
+    <div> <%= group.name%></div>
+
+    <% end %>
+  <% end %>
+</div>
+  <%= link_to 'ADD A NEW CATEGORY', new_user_group_path(current_user), class:  'add-ne-category-btn text-gray-4' %>
