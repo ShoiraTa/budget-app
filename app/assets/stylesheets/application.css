@@ -14,12 +14,17 @@
  *= require_self
  */
 
+
  .bg-blue{
    background-color: #3678C2;
  }
 
  .bg-green{
    background-color: #60B523;
+ }
+
+ .bg-light{
+   background-color: #F0F3F2;
  }
 
  .text-gray-1{
@@ -35,8 +40,99 @@
   }
 
   .text-gray-4{
-    color: #989DA2;
+    color: #F0F3F2!important;
   }
 
+  /* paddings margins */
+.p-0{
+  padding:  0;
+}
+
+/* Flex */
+
+.d-flex{
+  display: flex;
+} 
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.min-height-full{
+  min-height: 100vh;
+}
+
+.height-full{
+  height: 100vh;
+}
+
+.height-80{
+  height: 80vh;
+}
+
+.height-20{
+  height: 20vh;
+}
+
+/* Buttons */
+
+.btn-action{
+  padding: 1.8rem;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.7rem;
+}
+
+.nav-right-action{
+  background-color: #3678C2!important;
+  border: none;
+  letter-spacing: 1px;
+}
+
+/*  */
+
+.nav-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3678C2;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.form-group{
+  margin: 0;
+}
+
+.form-group-custom{
+
+}
+
+.form-control-custom{
+  width: 100%;
+  border: 1px solid #F0F3F2;
+  padding: 1rem;
+  border-radius: 0;
+}
 
 
+input{
+  background-color: #fff!important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
