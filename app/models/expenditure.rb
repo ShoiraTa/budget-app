@@ -5,9 +5,9 @@ class Expenditure < ApplicationRecord
   validates :name, presence: true
   validates :amount, presence: true
 
-  def total_expenditures(group_id)
+  def total_expenditures(id)
     total = 0
-    Expenditure.where(group_id:).each do |expenditure|
+    Expenditure.where(group_id: id).each do |expenditure|
       total += expenditure.amount
     end
     total
