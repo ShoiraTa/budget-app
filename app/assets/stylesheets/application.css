@@ -108,7 +108,7 @@
 
 .add-ne-category-btn{
   padding: 2rem;
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   left: 10px;
   right: 10px;
@@ -166,10 +166,11 @@ input:-webkit-autofill:active{
 
 .category-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 15px;
   padding: 0rem 2rem;
   box-shadow: 2px 2px 2px #d1d4d8;
-  height: 6rem;
+  height: 7rem;
   align-items: center;
   background-color: #fff;
   margin: 1rem
@@ -177,4 +178,26 @@ input:-webkit-autofill:active{
 
 a{
   color: #555D67!important;
+}
+
+.icon-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+}
+
+.expenditures-total{
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #fff;
+  font-size: 1.5rem;
+
+}
+
+#expenditures, #categories{
+  margin-bottom: 10rem;
 }

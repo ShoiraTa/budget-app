@@ -5,7 +5,7 @@ class ExpendituresController < ApplicationController
   # GET /expenditures or /expenditures.json
   def index
     @group_id = Group.find(params[:group_id])
-    @expenditures = Expenditure.all
+    @expenditures = Expenditure.where(group_id: @group_id.id)
   end
 
   # GET /expenditures/1 or /expenditures/1.json
@@ -27,6 +27,7 @@ class ExpendituresController < ApplicationController
     @expenditure = Expenditure.new(expenditure_params)
     @expenditure.user_id = current_user.id
     @group = Group.find(params[:group_id])
+
     @expenditure.group_id = @group.id
 
       if @expenditure.save

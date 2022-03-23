@@ -2,11 +2,11 @@
 
   <div class="nav-header">
     <div>
-      <%= link_to  :back do %>
+      <%= link_to  user_group_expenditures_url(user_id: current_user.id, group_id: @group_id) do %>
         <%= image_tag "back.svg", style: 'height:10px; width:auto;' %>
       <% end  %>
     </div>
-    <h4 class="text-gray-4">NEW EXPENDITURE</h4>
+    <h4 class="text-gray-4">NEW EXPENDITURE </h4>
     <div class="actions">
       <%=  form.submit 'NEXT', class:" bg-light nav-right-action text-gray-4" %>
     </div>
@@ -31,7 +31,8 @@
 
  <div class= "form-group-custom" >
       <%= form.number_field :amount,   class:"form-control-custom", placeholder: "Enter expenditure amount", autofocus: true %>
-    </div>
+  </div>
+
     <div class= "form-group d-flex" >
       <%=  form.submit ('SUBMIT'), class:" add-ne-category-btn text-gray-4" %>
     </div> 
