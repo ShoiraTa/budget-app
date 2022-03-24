@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+        <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta
+      name="description"
+      content="A mobile web application where you can manage you budget"
+    />
+    <meta
+    name="image"
+    property="og:image"
+    content="https://user-images.githubusercontent.com/77038610/159881644-58627a7e-e630-4e32-a7e6-8f2a9c2916b0.png"
+  />
     <title><%= content_for?(:title) ? yield(:title) : "BudgetApp" %></title>
     <%= csrf_meta_tags %>
     <%= favicon_link_tag asset_path('back.svg') %>
