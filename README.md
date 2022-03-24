@@ -15,7 +15,7 @@
 
 ## Live page
 
-![](https://user-images.githubusercontent.com/77038610/159881644-58627a7e-e630-4e32-a7e6-8f2a9c2916b0.png)
+![](https://user-images.githubusercontent.com/77038610/159884257-7403b868-ecfa-49e9-97b3-70a56f192df7.png)
 [Visit demo page](https://budget-app-003.herokuapp.com/)
 
 
