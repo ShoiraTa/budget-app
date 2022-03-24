@@ -1,0 +1,45 @@
+<%= form_with(model: @expenditure,  url:"/users/#{current_user.id}/groups/#{@group_id}/expenditures" ) do |form| %>
+
+  <div class="nav-header">
+    <div>
+      <%= link_to  user_group_expenditures_url(user_id: current_user.id, group_id: @group_id) do %>
+        <%= image_tag "back.svg", style: 'height:10px; width:auto;' %>
+      <% end  %>
+    </div>
+    <h4 class="text-gray-4">NEW EXPENDITURE </h4>
+    <div class="actions">
+      <%=  form.submit 'NEXT', class:" bg-light nav-right-action text-gray-4" %>
+    </div>
+  </div>
+
+
+  <% if @expenditure.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@expenditure.errors.count, "error") %> prohibited this expenditure from being saved:</h2>
+
+      <ul>
+        <% @expenditure.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class= "form-group-custom" >
+      <%= form.text_field :name,   class:"form-control-custom", placeholder: "Enter expenditure name", autofocus: true %>
+    </div>
+
+ <div class= "form-group-custom" >
+      <%= form.number_field :amount,   class:"form-control-custom", placeholder: "Enter expenditure amount", autofocus: true %>
+  </div>
+
+  <div class= "form-group d-flex" >
+  
+  <div class='add-ne-category-btn-container-main'>
+    <div class= 'add-ne-category-btn-container'>
+        <%=  form.submit ('SUBMIT'), class:" add-ne-category-btn text-gray-4" %>
+      </div> 
+    </div> 
+  </div> 
+<% end %>
+

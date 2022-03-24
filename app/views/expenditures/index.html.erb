@@ -1,0 +1,35 @@
+<div class="nav-header ">
+ <div>
+      <%= link_to  user_groups_path do %>
+        <%= image_tag "back.svg", style: 'height:10px; width:auto;' %>
+      <% end  %>
+    </div>
+  <h4 class="text-gray-4 ">Expenditures</h4> 
+  <div> </div>
+</div>
+
+<div class= "expenditures-total">
+  <div class="icon-container"> 
+    <%= image_tag "#{@group_id.icon}.png", style: 'height:40px; width:auto;' %> 
+  </div>
+<% if @expenditures.count > 0 %>
+  <div class=" flex-column">
+    <p> <strong>Category:</strong> <%= @group_id.name %> </p>
+    <p> <strong>Total spent:</strong> $<%= @expenditures.first.total_expenditures(@group_id) %></p>
+  </div>
+  <%end %>
+</div>
+
+<div id="expenditures">
+  <% @expenditures.each do |expenditure| %>
+    <%= render expenditure %>
+    <p>
+     
+    </p>
+  <% end %>
+</div>
+<div class='add-ne-category-btn-container-main'>
+  <div class= 'add-ne-category-btn-container'>
+    <%= link_to "Add a new expenditure", new_user_group_expenditure_path(user_id: current_user.id, group_id: @group_id), class: 'add-ne-category-btn text-gray-4' %>
+  </div> 
+</div> 

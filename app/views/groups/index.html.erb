@@ -1,0 +1,28 @@
+
+<div class="nav-header ">
+<div> </div>
+  <h4 class="text-gray-4 ">CATEGORIES</h4>
+  <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:  'nav-link text-gray-4' %>
+</div>
+
+<div id="categories">
+  <% if @groups %>
+    <% @groups.each do |group| %>
+    <a href = "/users/<%= group.user_id %>/groups/<%= group.id %>/expenditures" >
+    <div class= 'category-container'>
+      <div class="icon-container"> 
+       <%= image_tag "#{group.icon}.png", style: 'height:40px; width:auto;' %>  <%= group.name%>
+      </div>
+        <div><%= group.user_name(group.user_id) %> </div>
+
+      <div> Total: $<%= group.total_spent(group.id)%></div>
+    </div>
+    </a>
+    <% end %>
+  <% end %>
+</div>
+<div class='add-ne-category-btn-container-main'>
+  <div class= 'add-ne-category-btn-container'>
+    <%= link_to 'ADD A NEW CATEGORY', new_user_group_path(current_user), class:  'add-ne-category-btn text-gray-4' %>
+  <div>
+<div>

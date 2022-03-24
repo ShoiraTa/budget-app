@@ -1,0 +1,226 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.bg-blue {
+  background-color: #3678c2;
+}
+
+.bg-green {
+  background-color: #60b523;
+}
+
+.bg-light {
+  background-color: #f0f3f2;
+}
+
+.text-gray-1 {
+  color: #434b55;
+}
+
+.text-gray-2 {
+  color: #555d67;
+}
+
+.text-gray-3 {
+  color: #878a8f;
+}
+
+.text-gray-4 {
+  color: #f0f3f2 !important;
+}
+
+/* paddings margins */
+.p-0 {
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Flex */
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.min-height-full {
+  min-height: 100vh;
+}
+
+.height-full {
+  height: 100vh;
+}
+
+.height-80 {
+  height: 80vh;
+}
+
+.height-20 {
+  height: 20vh;
+}
+
+/* Buttons */
+
+.btn-action {
+  padding: 1.8rem;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.7rem;
+}
+
+.nav-right-action {
+  background-color: #3678c2 !important;
+  border: none;
+  letter-spacing: 1px;
+}
+
+.add-ne-category-btn-container {
+  padding: 2rem;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background-color: #60b523 !important;
+  text-align: center;
+  border: none !important;
+  height: 6rem;
+}
+
+.add-ne-category-btn {
+  padding: 1rem;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: #60b523 !important;
+  text-align: center;
+  border: 1px solid #fff;
+}
+
+.add-ne-category-btn-container-main {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f0f3f2 !important;
+  height: 6rem;
+}
+
+/* header */
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3678c2;
+  padding: 0.5rem 1.5rem;
+}
+
+.form-group {
+  margin: 0;
+}
+
+.form-control-custom {
+  width: 100%;
+  border: 1px solid #f0f3f2;
+  padding: 1rem;
+  border-radius: 0;
+}
+
+input:focus {
+  outline: #fff !important;
+}
+
+select {
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  box-shadow: 2px 2px 2px #d1d4d8;
+  background-color: #fff;
+  outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.label {
+  padding-left: 1rem;
+}
+
+.category-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 15px;
+  padding: 0 2rem;
+  box-shadow: 2px 2px 2px #d1d4d8;
+  height: 7rem;
+  align-items: center;
+  background-color: #fff;
+  margin: 1rem;
+}
+
+a {
+  color: #555d67 !important;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+}
+
+.expenditures-total {
+  height: 6rem;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  background-color: #fff;
+  font-size: 1.5rem;
+}
+
+#expenditures,
+#categories {
+  margin-bottom: 10rem;
+}

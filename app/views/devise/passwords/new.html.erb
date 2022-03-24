@@ -1,0 +1,22 @@
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= bootstrap_devise_error_messages! %>
+
+  <div class="nav-header mb-2">
+    <div>
+      <%= link_to  :root do %>
+        <%= image_tag "back.svg", style: 'height:10px; width:auto;' %>
+      <% end  %>
+    </div>
+    <h4 class="text-gray-4">CHANGE PASSWORD</h4>
+    <div class="actions">
+      <%=  f.submit 'SUBMIT', class:" bg-light nav-right-action text-gray-4" %>
+    </div>
+  </div>
+
+  <div class="form-group-custom">
+    <%= f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'Email', class: 'form-control-custom' %>
+  </div>
+
+<% end %>
+
+<%= render 'devise/shared/links' %>

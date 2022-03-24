@@ -1,0 +1,33 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+  <%= bootstrap_devise_error_messages! %>
+
+  <div class="nav-header mb-2">
+    <div>
+      <%= link_to  :root do %>
+        <%= image_tag "back.svg", style: 'height:10px; width:auto;' %>
+      <% end  %>
+    </div>
+    <h4 class="text-gray-4">REGISTER</h4>
+    <div class="actions">
+      <%=  f.submit t('.sign_up'), class:" bg-light nav-right-action text-gray-4" %>
+    </div>
+  </div>
+
+  <div class="form-group-custom">
+    <%= f.text_field :full_name, autofocus: true, class: 'form-control-custom', placeholder: 'Full name', input_html: { autocomplete: :off } %>
+  </div>
+
+  <div class="form-group-custom">
+    <%= f.email_field :email, autofocus: true, class: 'form-control-custom', placeholder: 'Email', input_html: { autocomplete: :off } %>
+  </div>
+
+  <div class="form-group-custom">
+    <%= f.password_field :password, placeholder: 'Password', input_html: { autocomplete: :off },class: 'form-control-custom' %>
+  </div>
+
+
+
+<% end %>
+
+
