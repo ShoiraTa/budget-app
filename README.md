@@ -15,7 +15,8 @@
 
 ## Live page
 
-(Visit demo page)[https://budget-app-003.herokuapp.com/]
+![](https://user-images.githubusercontent.com/77038610/159881644-58627a7e-e630-4e32-a7e6-8f2a9c2916b0.png)
+[Visit demo page](https://budget-app-003.herokuapp.com/)
 
 
 ## Getting Started
