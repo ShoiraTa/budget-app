@@ -13,9 +13,9 @@
 - Rspec
 - OOP
 
-## Live page
+## Demo
 
-![](https://user-images.githubusercontent.com/77038610/159884257-7403b868-ecfa-49e9-97b3-70a56f192df7.png)
+![](https://user-images.githubusercontent.com/77038610/159885098-fdac4f4e-8b56-467f-840c-49563a3bf35c.png)
 [Visit demo page](https://budget-app-003.herokuapp.com/)
 
 
